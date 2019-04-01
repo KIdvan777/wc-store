@@ -12840,29 +12840,3 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 "use strict";
 
 alert('custom');
-"use strict";
-
-jQuery(document).ready(function ($) {
-  $('a.modal-product-link').on('click', function () {
-    var productId = $(this).attr('data-product-id');
-    console.log('prid:' + productId);
-    var data = {
-      id: productId,
-      action: 'ajax_quick_view',
-      nonce: ajax_quick_view.nonce
-    };
-    $.ajax({
-      url: ajax_quick_view.url,
-      data: data,
-      type: 'POST',
-      dataType: 'json',
-      beforeSend: function beforeSend(xhr) {
-        $('#modal-product .modal-body').text('Downloading');
-      },
-      success: function success(data) {
-        console.log('prids:' + data);
-        $('#modal-product .modal-content .section .modal-body').html(data.product);
-      }
-    });
-  });
-});

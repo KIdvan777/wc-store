@@ -3363,6 +3363,53 @@ button.single_add_to_cart_button:hover{
     color: #fff;
     border: 1px solid #3c43a4;
 }
+
+.woocommerce .products li{
+    list-style: none;
+}
+.woocommerce .site-header-cart li{
+    list-style: none;
+}
+
+.woocommerce .w3ls_mobiles_grid_right_left {
+    width: 100%;
+    padding: 20px;
+}
+
+.woocommerce .w3ls_mobiles_grid_right_left .price{
+    display: block;
+    margin-bottom: 14px;
+}
+
+.woocommerce .w3ls_mobiles_grid_right_left .price .woocommerce-Price-amount {
+
+}
+
+
+.woocommerce .agile_ecommerce_tab_left .w3ls_mobiles_grid_right_left .button{
+
+    display: inline-block;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    border: 1px solid #c1c1c1;
+    border-radius: 5px;
+    background: transparent;
+    outline: none;
+	-webkit-transition:.5s all;
+	-moz-transition:.5s all;
+	transition:.5s all;
+}
+
+.woocommerce .agile_ecommerce_tab_left .w3ls_mobiles_grid_right_left .button:hover{
+    background:#3c43a4;
+    color:#fff;
+    border:1px solid #3c43a4;
+}
+
 /*-- start-responsive-design --*/
 @media (max-width:1366px){
     .banner h3 {
