@@ -38,9 +38,10 @@ jQuery(document).ready(function(){
 		timestamp : (new Date()).getTime() + 11*24*60*60*1000
 	});
 
-	$(window).load(function() {
-		$("#flexiselDemo1").flexisel({
-			visibleItems: 4,
+
+	jQuery(window).load(function() {
+		jQuery("#flexiselDemo2").flexisel({
+			visibleItems:5,
 			animationSpeed: 1000,
 			autoPlay: true,
 			autoPlaySpeed: 3000,
@@ -61,9 +62,7 @@ jQuery(document).ready(function(){
 				}
 			}
 		});
-
 	});
-
 	w3ls.render();
 
 	w3ls.cart.on('w3sb_checkout', function (evt) {

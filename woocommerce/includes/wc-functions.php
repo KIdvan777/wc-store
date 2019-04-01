@@ -3,6 +3,12 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+add_action('woocommerce_before_main_content', 'wc_add_sidebar_only_archive', 50);
+function wc_add_sidebar_only_archive (){
+	if(! is_product()){
+		woocommerce_get_sidebar();
+	}
+}
 // Remove customize and than add breadcrumbs template single-product
 remove_action('woocommerce_before_main_content','woocommerce_breadcrumb',20);
 
@@ -148,3 +154,22 @@ return '80';
 }
 remove_filter( 'woocommerce_review_before_comment_meta', 'woocommerce_review_display_rating', 10 );
 add_action( 'woocommerce_review_after_comment_text', 'woocommerce_review_display_rating', 10 );
+
+add_action( 'wp_footer', 'wc_modal_window' );
+function wc_modal_window(){
+	global $product;
+	?>
+	<div class="modal video-modal fade" id="modal-product" tabindex="-1" role="dialog" aria-labelledby="modal-product">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				</div>
+				<section>
+
+				</section>
+			</div>
+		</div>
+	</div>
+	<?php
+}

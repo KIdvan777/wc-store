@@ -15,7 +15,7 @@ WooCommerce styles override
 /**
  * Shop tables
  */
-table.shop_table_responsive thead {
+/* table.shop_table_responsive thead {
 	display: none;
 }
 
@@ -75,7 +75,7 @@ table.shop_table_responsive tr td.download-actions .button {
 /**
  * Products
  */
-ul.products {
+/*ul.products {
 	content: "";
 	display: table;
 	table-layout: fixed;
@@ -576,4 +576,4 @@ p.no-comments {
 
 .widget_price_filter .ui-slider-horizontal .ui-slider-range {
 	height: 100%;
-}
+} */

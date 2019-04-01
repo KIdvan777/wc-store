@@ -22,26 +22,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( $related_products ) : ?>
 
-	<section class="related products">
+<section class="related products w3l_related_products">
+	<div class="container">
+	<h3><?php esc_html_e( 'Related products', 'woocommerce' ); ?></h3>
 
-		<h2><?php esc_html_e( 'Related products', 'woocommerce' ); ?></h2>
+		<ul id="flexiselDemo2" class="products columns-<?php echo esc_attr( wc_get_loop_prop( 'columns' ) ); ?>">
 
-		<?php woocommerce_product_loop_start(); ?>
+		<?php foreach ( $related_products as $related_product ) : ?>
 
-			<?php foreach ( $related_products as $related_product ) : ?>
+			<?php
+				$post_object = get_post( $related_product->get_id() );
+				setup_postdata( $GLOBALS['post'] =& $post_object );
+				wc_get_template_part( 'content', 'product' ); ?>
 
-				<?php
-				 	$post_object = get_post( $related_product->get_id() );
+		<?php endforeach; ?>
 
-					setup_postdata( $GLOBALS['post'] =& $post_object );
-
-					wc_get_template_part( 'content', 'product' ); ?>
-
-			<?php endforeach; ?>
-
-		<?php woocommerce_product_loop_end(); ?>
-
-	</section>
+		</ul>
+		
+	</div>
+</section>
 
 <?php endif;
 
