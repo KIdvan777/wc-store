@@ -1,15 +1,41 @@
 <?php
 
-get_header();
+$header_one = carbon_get_theme_option('wc_header_one');
+$header_two = carbon_get_theme_option('wc_header_two');
+
+
+if('on'=== $header_two){
+	get_header('one');
+	echo '2';
+}
+
 ?>
 
 
 	<!-- banner -->
-	<div class="banner">
-		<div class="container">
-			<h3>Electronic Store, <span>Special Offers</span></h3>
-		</div>
-	</div>
+		<?php
+	    $banner_id = carbon_get_theme_option('wc_banner_widget_show');
+		$fon = carbon_get_theme_option('wc_banner_image');
+		$fon_src = $fon ? wp_get_attachment_image_src($fon, 'full') : '';
+		$banner_heading = carbon_get_theme_option('wc_banner_heading');
+		$banner_desc = carbon_get_theme_option('wc_banner_description');
+		$banner_background = carbon_get_theme_option('wc_banner_background');
+ 		if('on'=== $banner_id):?>
+	       <div class="banner">
+
+				<div class="container">
+					<?php #get_vd($banner_background); ?>
+					<?php if ($banner_heading): ?>
+						<h3 style="background:<?= $banner_background; ?>"><?= $banner_heading; ?> <span><?= $banner_desc ?></span></h3>
+					<?php endif; ?>
+
+
+
+				</div>
+					<img src="<?php echo $fon_src[0];?>" width="<?php echo $fon_src[1];?>" height="<?php echo $fon_src[2];?>" alt="">
+			</div>
+	    <?php endif;?>
+
 	<!-- //banner -->
 	<!-- banner-bottom -->
 	<div class="banner-bottom">

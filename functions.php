@@ -4,6 +4,7 @@
 use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 
+
 add_action( 'carbon_fields_register_fields', 'crb_attach_theme_options' );
 function crb_attach_theme_options() {
     Container::make( 'theme_options', __( 'Theme Options' ) )
@@ -16,6 +17,7 @@ add_action('carbon_fields_register_fields', 'wc_store_register_crb');
 function wc_store_register_crb(){
 	require get_template_directory() . '/includes/custom-fields-options/metabox.php';
 	require get_template_directory() . '/includes/custom-fields-options/theme-options.php';
+    require get_template_directory() . '/includes/custom-fields-options/theme-headers.php';
 }
 
 /*

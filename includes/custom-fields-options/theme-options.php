@@ -6,6 +6,7 @@ use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 
 
+
 // Default options page
 Container::make( 'theme_options',  'Настройки темы')
 		->set_icon('dashicons-carrot')
@@ -42,7 +43,8 @@ Container::make( 'theme_options',  'Настройки темы')
 							'compare' => '=',
 						)
 					)),
-    ) ) ->add_tab( 'Подвал', array(
+				) )
+		->add_tab( 'Подвал', array(
 			Field::make( 'text', 'wc_footer_copyright', 'Копирайт' )
 				->set_default_value('Копирайт')->set_width(50),
 			Field::make( 'text', 'wc_footer_phone', 'Телефон' )
@@ -57,4 +59,18 @@ Container::make( 'theme_options',  'Настройки темы')
 					'on'=>'Включить',
 					'off'=>'Выключить',
 				))->set_width(30),
-		) );
+			) )
+		->add_tab('Баннер',array(
+			Field::make( 'radio', 'wc_banner_widget_show', 'Включить блок баннера' )
+				->set_options(array(
+					'on'=>'Включить',
+					'off'=>'Выключить',
+				)),
+				Field::make( 'image', 'wc_banner_image', 'Фон' ),
+				Field::make( 'text', 'wc_banner_heading', 'Заголовок банера' ),
+				Field::make( 'text', 'wc_banner_description', 'Текст банера' ),
+				Field::make( 'color', 'wc_banner_background', 'фон банера' )
+					  ->set_alpha_enabled( true ),
+
+
+			));

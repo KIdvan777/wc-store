@@ -1,0 +1,72 @@
+/*-- banner --*/
+.banner {
+    height: 500px;
+    overflow: hidden;
+}
+.banner img{
+    max-width: 100%;
+    height: auto;
+}
+
+.banner.banner10{
+    min-height:300px;
+}
+.banner.banner1,.banner.banner2,.banner.banner3{
+    min-height:400px;
+}
+.banner1 h2,.banner10 h2{
+    color: #fff;
+    font-size: 3em;
+    padding: 2.5em 0 0;
+    text-align: left;
+}
+.banner.banner1{
+    background:url(assets/images/bg1.jpg) no-repeat center;
+    background-size:cover;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+}
+.banner.banner2{
+    background:url(assets/images/bg2.jpg) no-repeat center;
+    background-size:cover;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+}
+.banner.banner3{
+    background:url(assets/images/bg3.jpg) no-repeat center;
+    background-size:cover;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+}
+/*-- agileits --*/
+.banner h3{
+    position: absolute;
+    font-size: 2em;
+    color:#fff;
+    // transform: rotate(-90deg);
+    // -webkit-transform: rotate(-90deg);
+    // -moz-transform: rotate(-90deg);
+    // -o-transform: rotate(-90deg);
+    // -ms-transform: rotate(-90deg);
+    text-transform: uppercase;
+    width: 45%;
+    margin-top: 5em;
+    padding: 1em .5em;
+    background:rgba(33, 33, 33, 0.85);
+}
+.banner h3 span{
+    display: block;
+    color:#ff5063;
+    margin: 1em 0 0 2em;
+    position:relative;
+}
+.banner h3 span:after{
+    content: '';
+    background: #fff;
+    height: 1px;
+    width: 25%;
+    position: absolute;
+    bottom: 45%;
+    left: 72%;
+}
+/*-- //banner --*/
