@@ -17,6 +17,10 @@ add_action( 'header_parts', 'wc_header_icon_login', 20 );
 function wc_header_icon_login() {
 	get_template_part( 'template-parts/header/login-icon' );
 }
+add_action( 'header_parts_two', 'wc_header_icon_login_two', 20 );
+function wc_header_icon_login_two() {
+	get_template_part( 'template-parts/header/login-icon-two' );
+}
 add_action( 'header_parts', 'wc_header_logo', 30 );
 function wc_header_logo() {
 	get_template_part( 'template-parts/header/logo' );

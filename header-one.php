@@ -39,7 +39,7 @@
 		 * @hooked estore_header_navi - 60
 		 *
 		 */
-		do_action('header_parts');
+		do_action('header_parts_two');
 		?>
 
 	</header><!-- #masthead -->

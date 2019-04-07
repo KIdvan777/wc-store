@@ -35,3 +35,16 @@ function wc_store_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'wc_store_pingback_header' );
+
+
+function wc_store_post_types(){
+	register_post_type('event',array(
+		'public'=>true,
+		'labels'=>array(
+			'name'=>'Events',
+		),
+		'menu_icon'=>'dashicons-calendar'
+
+	));
+}
+add_action('init', 'wc_store_post_types');
